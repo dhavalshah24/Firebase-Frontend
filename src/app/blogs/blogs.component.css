@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+.navbar {
+  min-height: 40px;
+  border: none;
+  padding-left: 30px;
+}
+.navbar-brand {
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 60px;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Roboto Slab", serif;
+}
+.navbar-default {
+  background-color: black;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+}
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  line-height: 25px;
+  bottom: 7px;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: grey;
+}
+
+.navbar-nav {
+  vertical-align: middle;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+.navbar-nav a {
+  margin-right: 10px;
+}
+
+.box {
+  border: 1px solid black;
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.header {
+  margin: 2%;
+  font-size: 30px;
+  font-weight: 400;
+  padding-left: 30px;
+  padding-top: 10px;
+  font-family: "Merriweather", serif;
+}
+label {
+  font-weight: normal;
+  font-size: medium;
+}
+.form-container {
+  padding: 20px;
+  display: flex;
+  margin-top: -20px;
+  flex-direction: column;
+}
+.form-group {
+  padding: 20px 50px;
+  width: 100%;
+  margin-bottom: -10px;
+}
+textarea {
+  resize: vertical;
+}
+.input-group {
+  padding: 20px 50px;
+  width: 100%;
+}
+
+.cards-heading {
+  margin-left: 50px;
+}
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card {
+  max-width: 300px;
+  margin: 30px;
+}
+button {
+  float: right;
+  margin-top: 20px;
+  margin-right: 5%;
+  margin-bottom: 20px;
+}
+button:hover {
+  transform: scale(1.2);
+}

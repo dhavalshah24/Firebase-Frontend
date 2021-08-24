@@ -1,0 +1,52 @@
+.box {
+    border: 1px solid black;
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: black;
+    border-radius: 20px;
+}
+.header {
+    margin: 3%;
+    font-size: 30px;
+    font-weight: 400;
+    padding-left: 30px;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+label {
+    font-weight: normal;
+    font-size: medium;
+    color: white;
+}
+.form-container {
+    padding: 20px;
+    display: flex;
+    margin-top: -20px;
+    flex-direction: column;
+}
+.form-group {
+    padding: 20px 50px 0 50px;
+    width: 100%;
+}
+.buttons{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 20px 0px;
+}
+button {
+    width: 100%;
+    margin: 10px 0;
+}
+.signup{
+    margin: 20px 0;
+}
+.signup p{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+
+}

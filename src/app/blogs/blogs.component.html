@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-default">
+    <a class="navbar-brand" routerLink="/blogs">Blog <span style="color: red;">Posts</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li><a class="nav-link" (click)="getMyBlogs()">My blogs</a></li>
+            <li><a class="nav-link" (click)="getAllBlogs()">All blogs</a></li>
+        </ul>
+        <ul class="navbar-nav">
+            <li><a (click)="logout()">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="box">
+    <div class="header">
+        Create Blog
+    </div>
+    <form class="form-container" #blogForm="ngForm">
+
+        <div class="form-group">
+            <label for="content">Enter Content</label>
+            <textarea class="form-control" id="content" placeholder="Content" name="content" [(ngModel)]="content"
+                rows="3"></textarea>
+        </div>
+        <div class="input-group">
+            <input type="file" class="form-control" id="image" name="image" (change)="onFileSelect($event)">
+        </div>
+        <div>
+            <button class="btn btn-primary" type="submit" (click)="onSubmit()">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div *ngIf="allBlogsDiv">
+    <div class="cards-heading">
+        <h2>All Blogs</h2>
+    </div>
+    <hr>
+    <div class="cards">
+        <mat-card class="card" *ngFor="let blog of allBlogs">
+            <img mat-card-image src="{{blog.downloadURL}}" alt="Blog Image">
+            <mat-card-title>{{blog.author}}</mat-card-title>
+            <mat-card-content>{{blog.content}}</mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<div *ngIf="myBlogsDiv">
+    <div class="cards-heading">
+        <h2>My Blogs</h2>
+    </div>
+    <hr>
+    <div class="cards">
+        <mat-card class="card" *ngFor="let blog of myBlogs">
+            <img mat-card-image src="{{blog.downloadURL}}" alt="Blog Image">
+            <mat-card-title>{{blog.author}}</mat-card-title>
+            <mat-card-content>{{blog.content}}</mat-card-content>
+        </mat-card>
+    </div>
+</div>
+

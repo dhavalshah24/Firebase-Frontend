@@ -1,0 +1,30 @@
+<div class="box">
+    <div class="header">
+        LOGIN
+    </div>
+    <form class="form-container"  [formGroup]="loginForm">
+
+        <div class="form-group">
+            <label for="Email">Enter Email</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Email" name="email" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="Password">Enter Password</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Password" name="password">
+        </div>
+        <div class="buttons">
+            <div>
+                <button class="btn btn-primary" type="submit" (click)="loginWithEmail()">Login</button>
+            </div>
+            <div>
+                <button class="btn btn-primary" type="submit" (click)="loginWithGoogle()">Login with Google</button>
+            </div>
+            
+            <div class="signup">
+                <p>Do not have an account? Sign up</p>
+                <a routerLink="/signup"><button class="btn btn-primary" type="submit">Sign up</button></a>
+            </div>
+        </div>
+        
+    </form>
+</div>
